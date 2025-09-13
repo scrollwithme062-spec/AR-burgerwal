@@ -1,54 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>AR Burger — Markerless Demo</title>
-  <!-- Google Model-Viewer library -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Burger</title>
+  <!-- Import model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     body {
       margin: 0;
-      background: #111;
-      color: #fff;
-      font-family: system-ui, sans-serif;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      gap: 12px;
+      background: #f9f9f9;
     }
     model-viewer {
       width: 100%;
-      max-width: 600px;
-      height: 70vh;
-      background: transparent;
-    }
-    button {
-      background: #0b84ff;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
+      height: 100%;
     }
   </style>
 </head>
 <body>
-  <h2>🍔 AR Burger Demo</h2>
 
-  <!-- 3D Burger -->
-  <model-viewer src="burger.glb"
-                alt="3D Burger"
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                auto-rotate
-                camera-controls
-                shadow-intensity="1">
+  <!-- Model Viewer with AR -->
+  <model-viewer src="burger.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate environment-image="neutral" alt="3D Burger Model">
   </model-viewer>
 
-  <p>Tap the AR button to place the burger on your table 📱</p>
 </body>
 </html>
