@@ -4,36 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AR Burger</title>
-  <!-- Import model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f9f9f9;
-    }
-    model-viewer {
-      width: 100%;
-      height: 100%;
-    }
+    body { margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#111; color:#fff; font-family:system-ui, sans-serif; }
+    model-viewer { width:100%; max-width:720px; height:80vh; background:transparent; }
+    .hint { text-align:center; margin-top:8px; font-size:0.95rem; color:#ddd; }
   </style>
 </head>
 <body>
-
-  <!-- Model Viewer with AR -->
-  <model-viewer src="burger.glb"
-                ar
-                ar-modes="scene-viewer webxr quick-look"
-                ar-scale="auto"
-                camera-controls
-                auto-rotate
-                environment-image="neutral"
-                alt="3D Burger Model">
-  </model-viewer>
-
+  <div>
+    <model-viewer src="burger.glb"
+                  alt="3D Burger Model"
+                  ar
+                  ar-modes="scene-viewer webxr quick-look"
+                  ar-scale="auto"
+                  camera-controls
+                  auto-rotate
+                  environment-image="neutral"
+                  shadow-intensity="1">
+    </model-viewer>
+    <p class="hint">Open on a mobile device (Android Chrome / iOS Safari). Tap "View in AR" to place the burger on a real surface.</p>
+  </div>
 </body>
 </html>
